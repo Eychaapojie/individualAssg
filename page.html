@@ -1,0 +1,103 @@
+<html>
+<head>
+	<title>Homepage</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body{
+	background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("image/b3.jpg");
+	font-family: richela kids;
+	color: White;
+	margin: 0;
+	padding: 0;
+	background-size: cover;
+	background-position: center;
+}
+.flow{
+	margin: 300px auto;
+}
+.flow img{
+		width:80px;
+		margin-bottom: 20px;
+}
+.active {
+		text-align: center;
+		border: 1px solid auto;
+		
+}
+.active  li{
+		display: inline-block;
+		width: 200px;
+		position: relative;
+		border-style: solid;
+		border-color: Gold;
+}
+.active  li a{
+		text-decoration : none;
+		padding : 5px 20px;
+}
+.active  li p{
+		text-decoration : none;
+		padding : 5px 20px;
+		font-family : richela kids;
+		font-size :18px ;
+		margin-top: -20px;
+}
+.logo{
+	padding: 20px 0;
+	width:20%;
+}
+.HTML{
+	font-family: arial;
+	margin:0;
+	font-size:55px;
+	color:white;
+	text-align: center;
+}
+#demo{
+	font-family: baloo;
+	margin-top:-500px;
+	font-size:30px;
+	color:white;
+	text-align: center;
+}
+	
+</style>
+</head>
+<body>
+	<div class="logo">
+				<img width="140px" height="140px" align="left" src="image/4.jpg">
+			</div>
+	<div class="flow">
+	<ul class="active">
+		<li>
+			<a href = "page.html"><img src="image/home.png"></a><br>
+			<p>Home</p>
+		</li>
+		<li>
+			<a href = "profile.html"><img src="image/profail.png"></a><br>
+			<p>Profail</p>
+		</li>
+		<li>
+			<a href = "skill.html"><img src="image/skill.png"></a><br>
+			<p>Skills</p>
+		</li>
+		<li>
+			<a href = "gallery.html"><img src="image/gallery.png"></a><br>
+			<p>Gallery</p>
+		</li>
+		<li>
+			<a href = "feedback.html"><img src="image/feedback.png"></a><br>
+			<p>Feedback</p>
+		</li>
+		</ul>
+	</div>
+	<div class="HTML">
+			<p id="demo"></p>
+				<script>
+					var d = new Date();
+					document.getElementById("demo").innerHTML = d;
+				</script>
+		</div>
+</body>
+</html>
+

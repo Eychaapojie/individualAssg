@@ -1,0 +1,169 @@
+<html>
+<head>
+<title>Skills</title>
+<style>
+body{
+	background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("image/b2.jpg");
+	font-family: sans-serif;
+	color: White;
+	margin: 0;
+	padding: 0;
+	background-size: cover;
+	background-position: center;
+}
+header{
+	font-family: richela kids;
+	color: SeaShell;
+	margin-top: 0;
+}
+
+.active {
+	float : right;
+	list-style: none;
+	margin-top : 10px;
+}
+.active  li{
+		display: inline-block;
+}
+.active  li a{
+		text-decoration : none;
+		width:80px;
+		margin-top: -10px;
+		float: left;
+		life-style: none;
+		padding: 0;
+}
+.active  li p{
+		text-decoration : none;
+		padding : 5px 20px;
+		font-family : richela kids;
+		font-size :18px ;
+		margin-top: -20px;
+}
+.logo{
+	padding: 20px 50px;
+	width:20%;
+}
+.skill{
+	width: 500px;
+	margin: 60px auto;
+	color: white;
+}
+.skill li{
+	margin: 20px 0;
+}
+.bar{
+	background: Orange;
+	display: block;
+	height: 2px;
+	border: 1px solid rgba(0,0,0,0.3);
+	overflow: hidden;
+	box-shadow: 0 0 10px #2187e7b3;
+}
+.bar span{
+	height: 2px;
+	float: left;
+	background: #2187e7;
+}
+.HTML{
+	width:90%;
+	animation: HTML 2s;
+}
+.CSS{
+	width: 85%;
+	animation: CSS 2s;
+}
+.JAVA{
+	width: 79%;
+	animation: JAVA 2s;
+}
+.JQ{
+	width:60%;
+	animation: JQ 2s;
+}
+@keyframes HTML{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width:90%;
+	}
+}
+@keyframes CSS{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width:90%;
+	}
+}
+@keyframes JAVA{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width:90%;
+	}
+}
+@keyframes JQ{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width:90%;
+	}
+}
+	
+
+	
+	
+</style>
+</head>
+<body>
+		<div class="logo">
+				<img width="140px" height="140px" align="left" src="image/4.jpg">
+			</div>
+<header>
+	<div>
+	<ul class="active">
+		<li>
+			<a href = "page.html"><img src="image/home.png"></a><br>
+			<p>Home</p>
+		</li>
+		<li>
+			<a href = "profile.html"><img src="image/profail.png"></a><br>
+			<p>Profail</p>
+		</li>
+		<li>
+			<a href = "skill.html"><img src="image/skill.png"></a><br>
+			<p>Skills</p>
+		</li>
+		<li>
+			<a href = "gallery.html"><img src="image/gallery.png"></a><br>
+			<p>Gallery</p>
+		</li>
+		<li>
+			<a href = "feedback.html"><img src="image/feedback.png"></a><br>
+			<p>Feedback</p>
+		</li>
+		</ul>
+	</div>
+	</header>
+	<div class="skill">
+		<h1>My Skills</h1>
+		<li>
+		<h3>HTML</h3><span class="bar"><span class="HTML"></span></span>
+		</li>
+		<li>
+		<h3>CSS</h3><span class="bar"><span class="CSS"></span></span>
+		</li>
+		<li>
+		<h3>JavaScript</h3><span class="bar"><span class="JAVA"></span></span>
+		</li>
+		<li>
+		<h3>JQuery</h3><span class="bar"><span class="JQ"></span></span>
+		</li>
+	</div>
+	
+</body>
+</html>

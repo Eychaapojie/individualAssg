@@ -1,0 +1,211 @@
+<html>
+<head>
+	<title> Feedback Page </title>
+	
+	<style>
+body{
+	background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("image/b1.jpg");
+	margin:0;
+	padding: 0;
+	background-size: cover;
+	background-position: center;
+}
+header{
+	font-family: richela kids;
+	color: Snow;
+	margin-top: 0;
+}
+.logo{
+	padding: 20px 50px;
+	width:20%;
+}
+.active {
+	float : right;
+	list-style: none;
+	margin-top : -10px;
+}
+.active  li{
+		display: inline-block;
+}
+.active  li a{
+		text-decoration : none;
+		width:80px;
+		margin-top: -10px;
+		float: left;
+		life-style: none;
+		padding: 0;
+		height:80px;
+}
+.active  li p{
+		text-decoration : none;
+		padding : 5px 20px;
+		font-family : richela kids;
+		font-size :18px ;
+		margin-top:50px;
+}
+	#para{
+		margin: 300px;
+		padding: 0;
+		font-family: san-serif;
+	}
+	.loginborder{
+		width:420px;
+		height:550px;
+		background:#000;
+		color:#fff;
+		top: 40%;
+		left:45%;
+		position: absolute;
+		transform: translate(-50%, -50%);
+		box-sizing: border-box;
+		padding: 70px 30px;
+		margin-top: 100px;
+	}
+	.icon{
+		width: 90px;
+		height: 100px:
+		border-radius: 50%;
+		position: absolute;
+		top: -10%;
+		left: calc(52% - 50px);
+	}
+	h1{
+		margin: -25px;
+		padding: 0;
+		text-align: center;
+		font-size: 22px;
+		font-family: Cooper Black;
+	}
+	h5{
+		margin: 25px;
+		padding: 0;
+		text-align: center;
+		font-size: 15px;
+		font-family: Cooper Black;
+	}
+	.loginborder input{
+		width:100%;
+		margin-bottom: 20px;
+	}
+	.loginborder textarea[type="text"]{
+		border: double;		
+		border-bottom: 1px solid #fff;
+		background: transparent;
+		outline: none;
+		width: 360px;
+		height: 60px;
+		color: #fff;
+		font-family: arial;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		padding:10px;
+	}
+	.loginborder input[type="submit"]{
+		border: none;
+		outline: none;
+		height: 40px;
+		background: #fb2525;
+		color: #fff;
+		font-size: 18px;
+		border-radius: 20px;
+		margin-top:10px;
+	}
+	.loginborder input[type="submit"]:hover{
+		cursor: pointer;
+		background: Coral;
+		color: white;
+	}
+	.loginborder input[type="reset"]{
+		border: none;
+		outline: none;
+		height: 40px;
+		background: #fb2525;
+		color: #fff;
+		font-size: 18px;
+		border-radius: 20px;
+	}
+	.loginborder input[type="reset"]:hover{
+		cursor: pointer;
+		background: Coral;
+		color: white;
+	}
+	.loginborder a{
+		text-decoratin: none;
+		font-size: 12px;
+		line-height: 20px;
+		color: lightgrey;
+	}
+	.loginborder a:hover{
+		cursor: pointer;
+		color: Coral;
+	}
+	
+	</style> 
+</head>
+<body>
+<header>
+<div class="logo">
+				<img width="140px" height="140px" align="left" src="image/4.jpg">
+			</div>
+	<div>
+	<ul class="active">
+		<li>
+			<a href = "page.html"><img src="image/home.png"></a><br>
+			<p>Home</p>
+		</li>
+		<li>
+			<a href = "profile.html"><img src="image/profail.png"></a><br>
+			<p>Profail</p>
+		</li>
+		<li>
+			<a href = "skill.html"><img src="image/skill.png"></a><br>
+			<p>Skills</p>
+		</li>
+		<li>
+			<a href = "gallery.html"><img src="image/gallery.png"></a><br>
+			<p>Gallery</p>
+		</li>
+		<li>
+			<a href = "feedback.html"><img src="image/feedback.png"></a><br>
+			<p>Feedback</p>
+		</li>
+		</ul>
+	</div>
+	</header>
+	
+	<div id="para">
+	<div class="loginborder">
+		<img src="image/feedbackk.png" class="icon">
+			<h1>Feedback</h1>
+			<h5>Please tell us what do you think,any kind of feedback is highly appreciated</h5>
+			<form id="myform" method="post" action="" onsubmit="return validateform()">
+				<textarea type="text" name="feedback" placeholder="Your feedback"></textarea>
+				<textarea type="text" name="summary" placeholder="Short Summary"></textarea>
+				<textarea type="text" name="name" placeholder="Your Name"></textarea>
+				<input type="Submit" name=" " value="Submit Feedback" onclick="inform()">
+				<input type="Reset" name=" " value="Delete Feedback">
+				
+				
+				<span class="note">
+					For any question, Please contact me on <a href="https://twitter.com/eychaa4">My Twitter</a>
+					</span>
+					
+				</form>
+				<script>
+					var form=document.getElementById('myform');
+					myform.onsubmit= function(e){
+						e.preventDefault();
+						console.log(myform.feedback.value);
+						console.log(myform.summary.value);
+						console.log(myform.name.value);
+						form.reset();
+					}
+					function inform(){
+							alert("Your feedback have been send");
+						}
+					
+					</script>
+			</div>
+		</div>
+</body>
+</html>

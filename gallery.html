@@ -1,0 +1,180 @@
+<html>
+<head>
+	<title>Gallery</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body{
+	background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("image/b4.jpg");
+	margin:0;
+	padding: 0;
+	background-size: cover;
+	background-position: center;
+	}
+header{
+	font-family: richela kids;
+	color: PapayaWhip;
+}
+.logo{
+	padding: 20px 50px;
+	width:20%;
+}
+.active {
+	float : right;
+	list-style: none;
+	margin-top : -5px;;
+		
+}
+.active  li{
+		display: inline-block;
+}
+.active  li a{
+		text-decoration : none;
+		padding : 5px 5px;
+		font-family : richela kids;
+		font-size :18px ;
+		margin-top: -50px;
+}
+.active  li p{
+		text-decoration : none;
+		padding : 5px 20px;
+		font-family : richela kids;
+		font-size :18px ;
+		margin-top: -20px;
+}
+table{
+	width: 60%;
+	margin: auto;
+	margin-top:100px;
+	border: 3px solid yellow;
+	border-collapse: collapse;
+	text-align: center;
+	font-size:25px;
+	table-layout: fixed;
+	background: Cornsilk;
+	opacity: 0.7;
+	color: white;
+}
+table p{
+	color:DarkRed;
+	text-align: center;
+}
+#audioPlayer #playlist{
+	list-style: none;
+}
+#playlist li a{
+	color: black;
+	text-decoration: none;
+}
+#playlist li a:hover{
+	background : #fff;
+	color : orange;
+}
+#playlist .current-song a{
+	color: blue;
+}
+.tab{
+	width: 60%;
+	margin: auto;
+	margin-top:-5px;
+	border: 3px solid yellow;
+	border-collapse: collapse;
+	text-align: center;
+	font-size:25px;
+	table-layout: fixed;
+	background: Cornsilk;
+	opacity: 0.7;
+	color: white;
+	padding: -5px;
+}
+.vid{
+	width: 550px;
+	height: 340px;
+	margin-top:-10px;
+}
+.vid:hover{
+	filter: grayscale(100%);
+	transform: scale(1.1);
+	}
+	
+</style>
+</head>
+<body>
+<header>
+	<div class="logo">
+				<img width="140px" height="140px" align="left" src="image/4.jpg">
+			</div>
+	<div class="flow">
+	<ul class="active">
+		<li>
+			<a href = "page.html"><img src="image/home.png"></a><br>
+			<p>Home</p>
+		</li>
+		<li>
+			<a href = "profile.html"><img src="image/profail.png"></a><br>
+			<p>Profail</p>
+		</li>
+		<li>
+			<a href = "skill.html"><img src="image/skill.png"></a><br>
+			<p>Skills</p>
+		</li>
+		<li>
+			<a href = "gallery.html"><img src="image/gallery.png"></a><br>
+			<p>Gallery</p>
+		</li>
+		<li>
+			<a href = "feedback.html"><img src="image/feedback.png"></a><br>
+			<p>Feedback</p>
+		</li>
+	</div>
+	</header>
+	<table >
+		<tr>
+		<th><audio src="" controls id="audioPlayer">Sorry</audio>
+		<p>Music PlayList</p>
+			<ul id="playlist">
+				<li class="current-song"><a href="music/Surfaces - Sunday Best.mp3"> Sunday Best</a></li>
+				<li><a href="music/Bruno Mars - It Will Rain -.mp3"> It Will Rain</a></li>
+				<li><a href="music/PUBLIC - Make you mine -.mp3"> Make You Mine</a></li>
+				<li><a href="music/James Arthur - Impossible.mp3">Impossible</a></li>
+			</ul>
+			</th>
+			</tr>
+			<script src="JQuery3.3.1.js" >
+			</script>
+			<script>
+				audioPlayer();
+				function audioPlayer(){
+					var currentSong=0;
+					$('#audioPlayer')[0].src = $('#playlist li a')
+					[0];
+					$('#audioPlayer')[0].play();
+					$('#playlist li a').click(function(e){
+						e.preventDefault();
+						$('#audioPlayer')[0].src = this;
+						$('#audioPlayer')[0].play();
+						$('#playlist li').removeClass("current-song");
+						 currentSong = $(this).parent().index();
+						  $(this).parent().addClass("current-song");
+					});
+						$('#audioPlayer')[0].addEventListener('ended',function(){
+							currentSong++;
+							if(currentSong==$('#playlist li a').length)
+									currentSong=0;
+							$('#playlist li').removeClass("current-song");
+							$('#playlist li:eq('+currentSong+')').addClass('current-song');
+							$('#audioPlayer')[0].src = $('#playlist li a')[currentSong].href;
+							$('#audioPlayer')[0].play() ;
+						});
+					}
+			</script>
+		</table >
+		<table class="tab">
+		<tr>
+		<th><p>Video List</p><video class="vid" src="video/2.mp4" controls><p>DataBase</p></video>
+		<video class="vid" src="video/1.mp4" controls><p>DataBase</p></video>
+			</th>
+			</tr>
+			</table>
+		
+</body>
+</html>
